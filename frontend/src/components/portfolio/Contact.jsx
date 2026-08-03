@@ -71,7 +71,7 @@ export const Contact = () => {
               <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-3 text-[#374151] hover:text-[#2563EB] transition-colors" data-testid="contact-email">
                 <Mail size={18} className="text-[#2563EB]" /> {PROFILE.email}
               </a>
-              <a href={`tel:${PROFILE.phone}`} className="flex items-center gap-3 text-[#374151] hover:text-[#2563EB] transition-colors" data-testid="contact-phone">
+              <a href={`tel:${PROFILE.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 text-[#374151] hover:text-[#2563EB] transition-colors" data-testid="contact-phone">
                 <Phone size={18} className="text-[#2563EB]" /> {PROFILE.phone}
               </a>
               <p className="flex items-center gap-3 text-[#374151]">

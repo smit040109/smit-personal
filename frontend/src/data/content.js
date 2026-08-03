@@ -5,9 +5,9 @@ export const PROFILE = {
   title: "Digital Marketing & Growth Specialist",
   photo: "https://customer-assets-wrfwihn1.emergentagent.net/job_performance-driven-4/artifacts/sa9a8x91_smit%20photo.webp",
   resumeUrl: "/resume.pdf", // placeholder PDF — replace with final resume
-  email: "hello@smitpatel.com", // placeholder
-  phone: "+91 00000 00000", // placeholder
-  location: "Gujarat, India",
+  email: "smit63371@gmail.com",
+  phone: "+91 90233 76123",
+  location: "Valsad, Gujarat",
   socials: {
     linkedin: "#",
     twitter: "#",
