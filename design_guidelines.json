@@ -1,0 +1,143 @@
+{
+  "project_name": "Premium Personal Portfolio - Digital Marketing & Growth Specialist",
+  "theme_details": {
+    "mode": "light",
+    "archetype": "Swiss & High-Contrast (Premium Corporate)",
+    "overall_vibe": "Professional, Clean, Premium, Modern, Enterprise-ready, Trustworthy, Performance-focused. Apple/Stripe/Linear aesthetics.",
+    "colors": {
+      "background": "#FAFAFA",
+      "card_background": "#FFFFFF",
+      "primary_text": "#111827",
+      "secondary_text": "#6B7280",
+      "accent": "#2563EB",
+      "success": "#16A34A",
+      "border": "#E5E7EB",
+      "hero_gradient": "bg-gradient-to-br from-[#FAFAFA] via-[#F3F4F6] to-[#EFF6FF] (subtle premium blue tint)"
+    },
+    "radii": {
+      "cards": "rounded-[16px]",
+      "buttons": "rounded-full"
+    },
+    "shadows": {
+      "premium_soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "hover_lift": "shadow-[0_20px_40px_rgb(0,0,0,0.08)]"
+    }
+  },
+  "typography": {
+    "font_family": {
+      "primary": "Inter, sans-serif"
+    },
+    "rules": {
+      "strict_rule": "NEVER mix fonts. ONLY use Inter. Achieve premium feel through extreme weight contrast and spacing.",
+      "h1": "text-5xl md:text-7xl font-black tracking-tighter text-[#111827] leading-[1.1]",
+      "h2": "text-3xl md:text-4xl font-bold tracking-tight text-[#111827] leading-tight",
+      "h3": "text-xl md:text-2xl font-semibold tracking-tight text-[#111827]",
+      "body": "text-base md:text-lg font-normal text-[#6B7280] leading-relaxed",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-[#2563EB]"
+    }
+  },
+  "layouts": {
+    "spacing": "Generous. Use py-24 or py-32 for section spacing. Card paddings should be p-8 or p-10.",
+    "grid_system": "Bento-style grids for Expertise and Why Hire Me. Assymetrical layouts where possible (e.g., 7-col / 5-col split for About section).",
+    "container": "max-w-7xl mx-auto px-6 md:px-12"
+  },
+  "motion": {
+    "scrolling": "Lenis smooth momentum scrolling is MANDATORY.",
+    "hero_reveal": "Kinetic masked line-by-line reveal for the H1 on load using Framer Motion.",
+    "scroll_reveals": "Framer Motion viewport triggers. Fade up and slight scale (0.98 to 1) for cards as they enter the viewport.",
+    "parallax": "Subtle parallax on background geometric images or 3D floating effect on hero elements.",
+    "marquee": "One slow editorial marquee (kinetic text ribbon) for the 'Marketing Stack' section or a 'Trusted By / Expertise' repeating line."
+  },
+  "sections": [
+    {
+      "name": "Navigation",
+      "features": "Sticky nav with smooth scroll to sections. Active section highlight. Glassmorphism backdrop-blur-xl bg-white/70. Includes Logo (Smit Patel), Links, and a 'Contact' button."
+    },
+    {
+      "name": "Hero",
+      "features": "Subtle premium gradient background. H1 'Digital Marketing & Growth Specialist'. Subheading listing Performance Marketing, SEO, International Marketing, Lead Generation, Analytics, AI-Powered Marketing. Primary CTA 'View Experience' (pill-shaped, blue), Secondary CTA 'Contact Me' (outline), Download Resume CTA (text with icon). Subtle parallax geometric shapes floating in the background.",
+      "image_integration": "Abstract geometric white background image used with low opacity mix-blend-multiply."
+    },
+    {
+      "name": "About",
+      "features": "Storytelling layout. Text on left: MS University, Diploma in Computer Eng. Transitioning from technical to marketing. Image on right (professional office desk setup). Numbered manifesto chapters (01. Technical Roots, 02. Data-Driven Creativity)."
+    },
+    {
+      "name": "Experience",
+      "features": "Premium animated vertical timeline. Clean lines (border-[#E5E7EB]). 01: Excellent Jewels (Jul 2024–Jul 2025) - International Markets, Meta Ads. 02: Servall (Aug 2025–Present) - Multi-branch, offline + online. Use subtle hover scale on timeline cards."
+    },
+    {
+      "name": "Expertise",
+      "features": "Bento grid of animated cards. Categories: Performance Marketing, SEO, AI Search Optimisation, Marketing Automation. Clean typography, icon headers. White cards on #FAFAFA background."
+    },
+    {
+      "name": "Case Studies",
+      "features": "Two large featured cards: Excellent Jewels and Servall. Image-heavy tops with data analytics screens, factual metrics below. Hover effects trigger slight image zoom."
+    },
+    {
+      "name": "Marketing Stack",
+      "features": "Slow editorial marquee passing horizontally. Logos/Icons: Google Ads, Meta Ads, GA4, GTM, SEMrush, HubSpot, etc. Monochromatic blue/gray icons for premium feel."
+    },
+    {
+      "name": "Why Hire Me",
+      "features": "2x2 crisp grid. Cards: Performance Driven, International Marketing, Technical Foundation, Continuous Learner. 16px rounded, minimal borders, #FFFFFF background."
+    },
+    {
+      "name": "Education",
+      "features": "Minimalist list view. MS University, Diploma in Computer Engineering. High contrast dates."
+    },
+    {
+      "name": "Contact & Admin",
+      "features": "Working contact form saving to DB (requires API route / backend setup). Fields: Name, Email, Message. CTA 'Let's build measurable business growth together.' Note: Mention Admin page creation in codebase to view enquiries."
+    },
+    {
+      "name": "Footer",
+      "features": "Minimal, clean. Copyright text, social links (LinkedIn, Twitter). #FAFAFA background."
+    }
+  ],
+  "components": {
+    "buttons": "Pill shaped (rounded-full). Primary: bg-[#2563EB] text-white hover:bg-blue-700 hover:shadow-lg transition-all. Secondary: bg-white text-[#111827] border border-[#E5E7EB] hover:bg-gray-50. Include arrow icons on hover.",
+    "cards": "bg-[#FFFFFF] border border-[#E5E7EB] rounded-[16px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-300",
+    "inputs": "Shadcn-style minimal inputs. bg-[#FAFAFA] border border-[#E5E7EB] rounded-[12px] focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB]"
+  },
+  "images": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHdoaXRlJTIwZ2VvbWV0cmljfGVufDB8fHx8MTc4NTcyOTcxNHww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract white geometric waves, used as subtle parallax background in Hero.",
+      "category": "background"
+    },
+    "about_section": {
+      "url": "https://images.unsplash.com/photo-1575318633968-0383e7d07ca0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBjbGVhbiUyMG9mZmljZSUyMGRlc2t8ZW58MHx8fHwxNzg1NzI5NzEzfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern clean desktop near window, for the About section visual.",
+      "category": "content"
+    },
+    "case_study_1": {
+      "url": "https://images.unsplash.com/photo-1748609160056-7b95f30041f0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwc2NyZWVuJTIwbW9kZXJufGVufDB8fHx8MTc4NTcyOTcxM3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Data analytics tablet screen, used for the Excellent Jewels International Marketing Case Study.",
+      "category": "content"
+    },
+    "case_study_2": {
+      "url": "https://images.unsplash.com/photo-1758873268786-52af523052f7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHw0fHxkYXRhJTIwYW5hbHl0aWNzJTIwc2NyZWVuJTIwbW9kZXJufGVufDB8fHx8MTc4NTcyOTcxM3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Modern office working environment, for the Servall Growth Marketing Case Study.",
+      "category": "content"
+    }
+  },
+  "libraries": {
+    "motion": "framer-motion",
+    "scrolling": "lenis",
+    "icons": "lucide-react",
+    "components": "shadcn/ui (customized for 16px radii and #FAFAFA/#FFFFFF scheme)"
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "NEVER use any font other than Inter. Use font-black, font-light, and tight letter spacing to make it look premium.",
+    "Implement Lenis smooth scrolling globally.",
+    "Create a responsive, bento-style layout. Avoid boring equal columns; use 7-col/5-col splits.",
+    "Use Framer Motion for scroll-triggered fade-ups and the masked line-by-line hero text reveal.",
+    "Ensure all interactive elements have data-testid attributes (e.g., data-testid='contact-submit-button').",
+    "The Hero background must use the provided abstract geometric image with a very soft opacity (10-20%) and the `#FAFAFA` to `#EFF6FF` gradient.",
+    "All cards must have a 1px border of `#E5E7EB` and rounded-[16px]. No harsh shadows, only the premium soft shadows defined in theme_details.",
+    "Build the functional contact form and an Admin page/route to view the saved enquiries.",
+    "Do not use generic centered layouts. Left-align text blocks for a more editorial, structured feel.",
+    "Use a slow-moving marquee (using framer-motion or react-fast-marquee) for the Marketing Stack section."
+  ]
+}
