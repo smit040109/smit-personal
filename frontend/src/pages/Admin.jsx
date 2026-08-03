@@ -42,9 +42,14 @@ export default function Admin() {
     setLoading(true);
     try {
       const [m, s] = await Promise.all([getMessages(), getStats()]);
-      setMessages(m);
-      setStats(s);
+      setMessages(Array.isArray(m) ? m : []);
+      setStats(
+        s && typeof s === "object" && !Array.isArray(s)
+          ? s
+          : { total: 0, new: 0, replied: 0, archived: 0 }
+      );
     } catch {
+      setMessages([]);
       toast.error("Failed to load enquiries.");
     } finally {
       setLoading(false);
@@ -59,7 +64,9 @@ export default function Admin() {
   const changeStatus = async (id, status) => {
     try {
       const updated = await updateMessageStatus(id, status);
-      setMessages((prev) => prev.map((m) => (m.id === id ? updated : m)));
+      setMessages((prev) =>
+        (Array.isArray(prev) ? prev : []).map((m) => (m.id === id ? updated : m))
+      );
       setSelected((s) => (s && s.id === id ? updated : s));
       toast.success(`Marked as ${status}`);
       getStats().then(setStats).catch(() => {});
@@ -71,7 +78,9 @@ export default function Admin() {
   const remove = async (id) => {
     try {
       await deleteMessage(id);
-      setMessages((prev) => prev.filter((m) => m.id !== id));
+      setMessages((prev) =>
+        (Array.isArray(prev) ? prev : []).filter((m) => m.id !== id)
+      );
       setSelected((s) => (s && s.id === id ? null : s));
       toast.success("Enquiry deleted.");
       getStats().then(setStats).catch(() => {});
@@ -85,7 +94,7 @@ export default function Admin() {
     if (m.status === "new") changeStatus(m.id, "read");
   };
 
-  const filtered = messages.filter((m) => {
+  const filtered = (Array.isArray(messages) ? messages : []).filter((m) => {
     const matchFilter = filter === "all" || m.status === filter;
     const q = query.toLowerCase();
     const matchQuery =
@@ -97,11 +106,12 @@ export default function Admin() {
     return matchFilter && matchQuery;
   });
 
+  const s = stats && typeof stats === "object" ? stats : {};
   const statCards = [
-    { label: "Total", value: stats.total, icon: Inbox, color: "text-[#111827]" },
-    { label: "New", value: stats.new, icon: Mail, color: "text-[#2563EB]" },
-    { label: "Replied", value: stats.replied, icon: CheckCircle2, color: "text-[#16A34A]" },
-    { label: "Archived", value: stats.archived, icon: Archive, color: "text-[#6B7280]" },
+    { label: "Total", value: s.total ?? 0, icon: Inbox, color: "text-[#111827]" },
+    { label: "New", value: s.new ?? 0, icon: Mail, color: "text-[#2563EB]" },
+    { label: "Replied", value: s.replied ?? 0, icon: CheckCircle2, color: "text-[#16A34A]" },
+    { label: "Archived", value: s.archived ?? 0, icon: Archive, color: "text-[#6B7280]" },
   ];
 
   return (
