@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import { Send, Mail, Phone, MapPin, Download, Check } from "lucide-react";
+import { Send, Mail, Phone, MapPin, Check } from "lucide-react";
 import { Section, Overline, Reveal } from "./primitives";
 import { CONTACT_AVAILABILITY, PROFILE } from "../../data/content";
 import { sendContactMessage } from "../../lib/api";
@@ -78,14 +78,6 @@ export const Contact = () => {
                 <MapPin size={18} className="text-[#2563EB]" /> {PROFILE.location}
               </p>
             </div>
-            <a
-              href={PROFILE.resumeUrl}
-              download="Smit-Patel-Resume.pdf"
-              data-testid="contact-resume-btn"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#111827] border border-[#E5E7EB] transition-all hover:bg-gray-50"
-            >
-              <Download size={17} /> Download Resume
-            </a>
           </Reveal>
         </div>
 

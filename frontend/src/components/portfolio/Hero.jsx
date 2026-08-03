@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowUpRight, Download } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { HERO, PROFILE } from "../../data/content";
 import { scrollToSection } from "../../hooks/useLenis";
 
@@ -102,12 +102,12 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.8 }}
-            className="mt-10 flex flex-wrap items-center gap-3"
+            className="mt-10 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3"
           >
             <button
               onClick={() => scrollToSection("experience")}
               data-testid="hero-view-experience-btn"
-              className="group inline-flex items-center gap-2 rounded-full bg-[#2563EB] px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/25"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#2563EB] px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/25"
             >
               View Experience
               <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -115,57 +115,50 @@ export const Hero = () => {
             <button
               onClick={() => scrollToSection("contact")}
               data-testid="hero-contact-btn"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-[#111827] border border-[#E5E7EB] transition-all hover:bg-gray-50 hover:border-[#d1d5db]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-[#111827] border border-[#E5E7EB] transition-all hover:bg-gray-50 hover:border-[#d1d5db]"
             >
               Contact Me
             </button>
-            <a
-              href={PROFILE.resumeUrl}
-              download="Smit-Patel-Resume.pdf"
-              data-testid="hero-resume-btn"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold text-[#2563EB] border border-transparent hover:border-[#2563EB]/30 hover:bg-[#EFF6FF] transition-all"
-            >
-              <Download size={17} />
-              Download Resume
-            </a>
           </motion.div>
         </div>
 
         {/* Right — portrait */}
-        <div className="lg:col-span-5 order-first lg:order-last">
+        <div className="lg:col-span-5 order-first lg:order-last w-full">
           <motion.div
             style={{ y: yPortrait }}
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto max-w-sm lg:max-w-none"
+            className="relative mx-auto w-full max-w-[260px] sm:max-w-xs lg:max-w-none"
           >
             {/* spotlight glow */}
             <div className="absolute -inset-6 rounded-[32px] bg-gradient-to-b from-[#2563EB]/10 via-transparent to-[#16A34A]/5 blur-2xl" />
             {/* framed portrait */}
-            <div className="relative rounded-[24px] overflow-hidden border border-[#E5E7EB] bg-gradient-to-b from-white to-[#EFF6FF] shadow-[0_30px_60px_rgb(37,99,235,0.12)]">
+            <div className="relative rounded-[20px] md:rounded-[24px] overflow-hidden border border-[#E5E7EB] bg-gradient-to-b from-white to-[#EFF6FF] shadow-[0_30px_60px_rgb(37,99,235,0.12)]">
               <img
                 src={PROFILE.photo}
                 alt="Smit Patel — Digital Marketing & Growth Specialist"
-                className="w-full h-[380px] md:h-[460px] lg:h-[520px] object-cover object-top"
+                className="w-full h-[300px] sm:h-[380px] md:h-[460px] lg:h-[520px] object-cover object-top"
               />
               {/* name plate */}
-              <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/80 backdrop-blur-md border border-white/60 px-5 py-3 flex items-center justify-between">
+              <div className="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4 rounded-2xl bg-white/80 backdrop-blur-md border border-white/60 px-4 py-2.5 md:px-5 md:py-3 flex items-center justify-between">
                 <div>
                   <p className="text-sm font-bold tracking-tight text-[#111827]">{PROFILE.name}</p>
                   <p className="text-xs text-[#6B7280]">{PROFILE.location}</p>
                 </div>
-                <span className="text-xs font-semibold text-[#2563EB]">Open to work</span>
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#16A34A]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#16A34A]" /> Open to work
+                </span>
               </div>
             </div>
             {/* floating accent card */}
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-5 top-8 hidden md:block rounded-2xl bg-white border border-[#E5E7EB] shadow-lg px-4 py-3"
+              className="absolute -left-5 top-8 hidden lg:block rounded-2xl bg-white border border-[#E5E7EB] shadow-lg px-4 py-3"
             >
               <p className="text-xs text-[#6B7280]">Focus</p>
-              <p className="text-sm font-bold text-[#111827]">Performance & SEO</p>
+              <p className="text-sm font-bold text-[#111827]">Performance &amp; SEO</p>
             </motion.div>
           </motion.div>
         </div>
