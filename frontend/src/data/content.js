@@ -3,7 +3,8 @@
 export const PROFILE = {
   name: "Smit Patel",
   title: "Digital Marketing & Growth Specialist",
-  resumeUrl: "#", // placeholder — replace with final PDF link
+  photo: "https://customer-assets-wrfwihn1.emergentagent.net/job_performance-driven-4/artifacts/sa9a8x91_smit%20photo.webp",
+  resumeUrl: "/resume.pdf", // placeholder PDF — replace with final resume
   email: "hello@smitpatel.com", // placeholder
   phone: "+91 00000 00000", // placeholder
   location: "Gujarat, India",

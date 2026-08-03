@@ -80,6 +80,7 @@ export const Contact = () => {
             </div>
             <a
               href={PROFILE.resumeUrl}
+              download="Smit-Patel-Resume.pdf"
               data-testid="contact-resume-btn"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#111827] border border-[#E5E7EB] transition-all hover:bg-gray-50"
             >
