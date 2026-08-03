@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Instagram, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { PROFILE, NAV_LINKS } from "../../data/content";
 import { scrollToSection } from "../../hooks/useLenis";
 
@@ -30,18 +30,6 @@ export const Footer = () => {
                 {l.label}
               </button>
             ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            <a href={PROFILE.socials.linkedin} aria-label="LinkedIn" className="h-10 w-10 rounded-full border border-[#E5E7EB] bg-white flex items-center justify-center text-[#6B7280] hover:text-[#2563EB] hover:border-[#2563EB]/40 transition-colors" data-testid="footer-linkedin">
-              <Linkedin size={18} />
-            </a>
-            <a href={PROFILE.socials.twitter} aria-label="Twitter" className="h-10 w-10 rounded-full border border-[#E5E7EB] bg-white flex items-center justify-center text-[#6B7280] hover:text-[#2563EB] hover:border-[#2563EB]/40 transition-colors" data-testid="footer-twitter">
-              <Twitter size={18} />
-            </a>
-            <a href={PROFILE.socials.instagram} aria-label="Instagram" className="h-10 w-10 rounded-full border border-[#E5E7EB] bg-white flex items-center justify-center text-[#6B7280] hover:text-[#2563EB] hover:border-[#2563EB]/40 transition-colors" data-testid="footer-instagram">
-              <Instagram size={18} />
-            </a>
           </div>
         </div>
 
