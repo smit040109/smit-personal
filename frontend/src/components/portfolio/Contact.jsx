@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Send, Mail, Phone, MapPin, Check } from "lucide-react";
 import { Section, Overline, Reveal } from "./primitives";
 import { CONTACT_AVAILABILITY, PROFILE } from "../../data/content";
-import { sendContactMessage } from "../../lib/api";
+import { sendContactEmail } from "../../lib/emailjs";
 
 const initialForm = { name: "", email: "", company: "", subject: "", message: "" };
 
@@ -22,12 +22,11 @@ export const Contact = () => {
     }
     setSubmitting(true);
     try {
-      await sendContactMessage(form);
-      toast.success("Message sent — I'll get back to you soon.");
+      await sendContactEmail(form);
+      toast.success("Thank you! Your message has been sent successfully.");
       setForm(initialForm);
-    } catch (err) {
-      const detail = err?.response?.data?.detail;
-      toast.error(typeof detail === "string" ? detail : "Something went wrong. Please try again.");
+    } catch {
+      toast.error("Something went wrong. Please try again.");
     } finally {
       setSubmitting(false);
     }
